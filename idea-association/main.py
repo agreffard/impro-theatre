@@ -1,3 +1,4 @@
+import sys
 import random
 import time
 
@@ -26,4 +27,12 @@ def lets_go_baby():
 		print_word()
 
 if __name__ == "__main__":
+	if(len(sys.argv) > 1):
+		try:
+			value = float(sys.argv[1])
+			if(value>0):
+				global waiting_time
+				waiting_time = value
+		except ValueError:
+			pass
 	lets_go_baby()
