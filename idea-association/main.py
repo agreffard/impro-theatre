@@ -31,7 +31,6 @@ if __name__ == "__main__":
         try:
             value = float(sys.argv[1])
             if(value>0):
-                global waiting_time
                 waiting_time = value
         except ValueError:
             pass
